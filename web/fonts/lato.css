@@ -1,0 +1,43 @@
+@font-face {
+  font-family: 'Lato';
+  src: url('Lato-Regular.eot');
+  src: url('Lato-Regular.eot?iefix') format('eot'),
+  url('Lato-Regular.woff') format('woff'),
+  url('Lato-Regular.ttf') format('truetype'),
+  url('Lato-Regular.svg#webfont') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('Lato-Medium.eot');
+  src: url('Lato-Medium.eot?iefix') format('eot'),
+  url('Lato-Medium.woff') format('woff'),
+  url('Lato-Medium.ttf') format('truetype'),
+  url('Lato-Medium.svg#webfont') format('svg');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face{
+  font-family: 'Lato';
+  src: url('Lato-Bold.eot');
+  src: url('Lato-Bold.eot?iefix') format('eot'),
+  url('Lato-Bold.woff') format('woff'),
+  url('Lato-Bold.ttf') format('truetype'),
+  url('Lato-Bold.svg#webfont') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face{
+  font-family: 'Lato';
+  src: url('Lato-Light.eot');
+  src: url('Lato-Light.eot?iefix') format('eot'),
+  url('Lato-Light.woff') format('woff'),
+  url('Lato-Light.ttf') format('truetype'),
+  url('Lato-Light.svg#webfont') format('svg');
+  font-weight: 300;
+  font-style: normal;
+}

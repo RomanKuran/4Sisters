@@ -1,0 +1,1205 @@
+// FONTS
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&subset=cyrillic,cyrillic-ext')
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700&subset=latin-ext')
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&subset=cyrillic,cyrillic-ext')
+@import '../fonts/lato.css'
+// VARIABLES
+$light-gray: #C4C2B6
+$dark-gray: #424A54
+$orange: #FF8100
+
+// NORMALIZE CONFIGURATION
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video
+  margin: 0
+  padding: 0
+  border: 0
+  font-size: 100%
+  font: inherit
+  vertical-align: baseline
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section
+  display: block
+
+body
+  line-height: 1
+
+ol, ul
+  list-style: none
+
+blockquote, q
+  quotes: none
+
+blockquote:before, blockquote:after,
+q:before, q:after
+  content: ''
+
+table
+  border-collapse: collapse
+  border-spacing: 0
+
+// GENERAL CONFIGURATIONS
+*
+  box-sizing: border-box
+body
+  background: $dark-gray
+  font-family: 'Lato', sans-serif
+  font-weight: normal
+  color: $light-gray
+  min-width: 320px
+a
+  text-decoration: none !important
+
+ul
+  list-style: none
+  margin: 0
+
+section
+  background: $dark-gray
+  padding: 35px 10px
+
+h3.title
+  text-transform: uppercase
+  font-family: 'Roboto', sans-serif
+  font-size: 21px
+  font-weight: normal
+  color: #fff
+  margin-bottom: 60px
+  text-align: center
+  span
+    border-bottom: 3px solid $orange
+    padding: 3px 8px
+
+@media (max-width: 576px)
+  section
+    padding: 20px 10px
+  h3.title
+    margin-bottom: 40px
+
+.two, .three, .four
+  display: none
+
+// STYLING NAVBAR
+.navbar
+  background: $dark-gray
+  .navbar-brand img
+    width: 130px
+  .navbar-nav .nav-link
+    text-transform: uppercase
+    font-family: 'PT Sans', sans-serif
+    font-size: 15px
+    padding-top: 2px
+    padding-bottom: 2px
+    // border-bottom: 2px solid #424A54
+    &::after
+      content: ''
+      display: block
+      background: $orange
+      position: relative
+      right: 10px
+      top: 2px
+      width: 0
+      height: 2px
+      transition: all .2s ease
+  .navbar-toggler
+    outline: none
+
+@media (min-width: 992px)
+  .navbar
+    padding: 1.25rem 1rem
+  .navbar .navbar-nav .nav-link
+    margin-left: 50px
+    &:hover::after
+      width: calc(100% + 20px)
+// border-bottom: 2px solid #FF8000
+
+@media (max-width: 992px)
+  .navbar .navbar-nav .nav-link
+    padding: .5rem 0
+
+// STYLING CAROUSEL
+.carousel
+  .indicators-wrap
+    background: rgba(66,74,84,0.7)
+    width: 100%
+    height: auto
+    position: absolute
+    top: 200px
+    z-index: 100
+    padding: 40px 0
+    .carousel-indicators
+      width: 100%
+      margin: 0
+      display: -webkit-flex
+      display: -ms-flex
+      display: flex
+      position: static
+      justify-content: space-around
+      li
+        height: auto
+        cursor: pointer
+        display: -webkit-flex
+        display: -ms-flex
+        display: flex
+        flex-direction: column
+        flex: 1
+        justify-content: center
+        align-items: center
+        background: inherit
+        text-indent: 0
+        &::before, &::after
+          display: none
+        &.active h4
+          color: $orange
+        &.active img
+          filter: none
+        img
+          height: 65px
+          width: auto
+          margin-bottom: 15px
+          filter: brightness(150%) grayscale(100%)
+        h4
+          text-transform: uppercase
+          font-size: 22px
+          margin: 0
+          text-align: center
+          font-weight: 300
+          width: 100%
+          display: block
+  .carousel-item
+    width: 100%
+    img
+      object-fit: cover
+      width: 100%
+      height: 720px
+
+@media (max-width: 992px)
+  .carousel .indicators-wrap .carousel-indicators li h4
+    font-size: 20px
+
+@media (max-width: 768px)
+  .carousel .indicators-wrap
+    top: 110px
+    padding: 25px 0
+    .carousel-indicators
+      flex-wrap: wrap
+      li
+        width: 50%
+        flex: 0 1 auto
+        margin: 0
+        font-size: 20px
+        &:nth-child(1), &:nth-child(2)
+          margin-bottom: 20px
+        h4
+          font-size: 20px
+        img
+          height: 60px
+  .carousel .carousel-item img
+    height: 550px
+
+@media (max-width: 576px)
+  .carousel .indicators-wrap
+    top: 100px
+  .carousel .indicators-wrap .carousel-indicators li h4
+    font-size: 18px
+  .carousel .carousel-item img
+    height: 500px
+
+// ================================ STYLING ARTICLE SECTION ===========================================
+.article
+  font-size: 20px
+  line-height: 28px
+  padding-top: 60px
+  .content
+    padding: 50px 40px 50px 0
+    box-sizing: content-box
+    position: relative
+    width: 100%
+    h5
+      padding: 10px 0 10px 14px
+      color: #fff
+      font-size: 22px
+      position: relative
+    p
+      margin: 0
+
+@media (max-width: 992px)
+  .article
+    .content
+      padding: 50px 40px 50px 10px
+
+@media (max-width: 576px)
+  .article
+    padding-top: 40px
+    .content
+      padding: 30px 15px 30px 10px
+      font-size: 16px
+      line-height: 22px
+      h5
+        font-size: 20px
+
+// STYLING GUARANTEE SECTION
+.guarantee .content
+  p
+    padding-left: 30px
+    &.with-frame
+      padding: 20px 0 20px 30px
+      position: relative
+  h5
+    margin: 25px 0 15px 0
+    padding-left: 30px
+    border: none
+
+@media (min-width: 992px)
+  .guarantee-content
+    padding-right: 100px
+
+@media (max-width: 576px)
+  .guarantee
+    .content
+      padding: 30px 15px 30px 0
+      p, h5
+        padding-left: 15px
+      p:nth-child(4)
+        padding-left: 15px
+
+// STYLING SECTION CREATING-SPACE
+.creating-space
+  .creating-space-list
+    li
+      list-style: square
+      margin-left: 15px
+
+// STYLING CONTACT US SECTION
+.contact-us
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  flex-direction: column
+  align-items: center
+  padding: 50px 0
+  img
+    width: 157px
+    margin-bottom: 20px
+    animation: pulse 4s infinite ease-in-out
+  h3
+    color: #fff
+    font-size: 36px
+
+@keyframes pulse
+  0%
+    transform: scale(1)
+    opacity: 1
+  20%
+    transform: scale(.95)
+    opacity: .7
+  40%
+    transform: scale(1)
+    opacity: 1
+
+@media (max-width: 576px)
+  .contact-us h3
+    font-size: 28px
+  .contact-us img
+    width: 130px
+    margin-bottom: 15px
+
+// STYLING BLOG SECTION
+.blog
+  padding-bottom: 30px
+  .block
+    height: 100%
+    padding: 0 15px
+    img
+      width: 100%
+      margin-bottom: 25px
+      box-shadow: 0 10px 40px rgba(0,0,0,.5)
+    h5
+      font-size: 20px
+      color: #fff
+      font-weight: 500
+      border-left: 3px solid $orange
+      padding: 10px 10px 10px 13px
+      margin-bottom: 20px
+      span
+        font-size: 28px
+        margin-right: 3px
+    p
+      font-size: 20px
+      line-height: 26px
+    article
+      padding: 0 7px
+    .read-more
+      color: #fff
+      font-size: 22px
+      margin-bottom: 50px
+      i
+        background: url('../siteIcons/arrowReadMore.svg') no-repeat
+        height: 20px
+        width: 20px
+        display: inline-block
+        position: relative
+        top: 5px
+        margin-left: 10px
+
+@media (max-width: 992px)
+  .blog .block br
+    display: none
+
+@media (max-width: 576px)
+  .blog .block h5
+    font-size: 20px
+    padding: 5px 10px
+    margin-bottom: 10px
+  .blog .block p
+    font-size: 16px
+    margin-bottom: 10px
+  .blog .block img
+    margin-bottom: 20px
+  .blog .block .read-more
+    font-size: 18px
+    margin-bottom: 30px
+
+// STYLING BAD IDEAS SECTION
+.bad-ideas
+  padding-bottom: 55px
+  img
+    width: 345px
+    height: 345px
+    float: left
+    box-shadow: 0 10px 40px rgba(0,0,0,.5)
+    margin: 0 65px 50px 0
+  article
+    padding-right: 50px
+    h5
+      font-size: 22px
+      color: #fff
+      font-weight: 500
+      margin-bottom: 30px
+      span
+        font-size: 28px
+    .bad-things
+      list-style-image: url('../siteIcons/list-square.svg')
+      li
+        font-size: 20px
+        color: #fff
+        font-weight: 500
+        p
+          font-size: 18px
+          line-height: 26px
+          font-weight: normal
+          margin: 25px 0
+    .views-likes
+      display: -webkit-flex
+      display: -ms-flex
+      display: flex
+      justify-content: flex-end
+      font-family: 'Roboto', sans-serif
+      font-size: 21px
+      color: #fff
+      margin: 10px 0
+      .views
+        display: -webkit-flex
+        display: -ms-flex
+        display: flex
+        .views-icon
+          background: url('../siteIcons/views.svg') no-repeat
+          height: 22px
+          width: 43px
+          position: relative
+          top: 4px
+          margin-right: 7px
+      .likes
+        display: -webkit-flex
+        display: -ms-flex
+        display: flex
+        margin-left: 20px
+        .likes-icon
+          background: url('../siteIcons/likes.svg') no-repeat
+          height: 34px
+          width: 34px
+          position: relative
+          top: -8px
+          margin-right: 7px
+  .row
+    position: relative
+
+@media (max-width: 992px)
+  .bad-ideas img
+    width: 100%
+    height: auto
+
+@media (max-width: 768px)
+  .bad-ideas img
+    margin: 0 0 30px 0
+  .bad-ideas article
+    padding-right: 20px
+
+@media (max-width: 576px)
+  .bad-ideas article
+    padding-right: 10px
+    h5
+      font-size: 20px
+      margin-bottom: 15px
+  .bad-ideas article .bad-things li
+    font-size: 18px
+    p
+      font-size: 16px
+      margin: 15px 0
+      line-height: 24px
+
+// STALING TEAM SECTION
+.team
+  padding-bottom: 55px
+  .row
+    justify-content: center
+    flex-wrap: nowrap
+    width: 100%
+    margin: 0
+  .person-img
+    width: 50%
+    height: auto
+  .desc
+    width: 50%
+    height: 263px
+    background: rgba(255,255,255,.2)
+    color: #fff
+    font-size: 12px
+    line-height: 16px
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    flex-direction: column
+    &.top
+      padding: 70px 17px 0 17px
+      justify-content: flex-start
+    &.bottom
+      padding: 17px
+      justify-content: flex-start
+      text-align: right
+    p
+      margin: 0
+      span
+        font-size: 19px
+    // line-height: 30px
+    .arrow
+      height: 30px
+      width: 100%
+      margin-bottom: 20px
+      &.right
+        display: -webkit-flex
+        display: -ms-flex
+        display: flex
+        justify-content: flex-end
+    .arrow-left
+      background: url(../siteIcons/arrow-left.svg) no-repeat
+      height: 20px
+      display: block
+      position: relative
+      left: -7px
+    .arrow-right
+      background: url(../siteIcons/arrow-right.svg) no-repeat
+      height: 20px
+      width: 20px
+      display: block
+      position: relative
+      right: -7px
+    .arrow-up
+      background: url(../siteIcons/arrow-up.svg) no-repeat
+      height: 20px
+      width: 20px
+      display: block
+      position: relative
+      right: -7px
+  .person
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    flex-direction: row
+    width: 100%
+    height: auto
+    &.p-top
+      align-items: flex-end
+      height: 50%
+    &.p-bot
+      align-items: flex-start
+      height: 50%
+  .block-three
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
+    width: 207px
+    .person-img
+      width: 100%
+    .desc
+      width: 100%
+  .block-one, .block-two
+    width: 414px
+
+@media (max-width: 1200px)
+  .team .desc
+    height: 230px
+
+@media (max-width: 992px)
+  .team .row
+    flex-wrap: wrap
+  .team
+    .block-one, .block-two
+      width: 100%
+    .desc
+      height: 100%
+    .block-three
+      flex-direction: row
+      align-items: flex-start
+      width: 100%
+      height: auto
+      .person-img
+        width: 50%
+        height: auto
+      .desc
+        height: 100%
+        width: 50%
+  .team .row .desc
+    &.top
+      justify-content: center
+      padding: 25px
+    &.bottom
+      justify-content: center
+      padding: 25px
+  .team .row .desc .arrow .arrow-left
+    left: 0
+  .team .row .desc .arrow .arrow-right
+    right: 0
+  .team .block-three .desc
+    text-align: left
+  .team .block-three .desc.bottom .arrow.right
+    display: block
+  .team .block-three .desc.bottom .arrow.right .arrow-up
+    display: none
+
+@media (max-width: 470px)
+  .team .row .desc
+    &.top
+      padding: 10px
+    &.bottom
+      padding: 10px
+  .team .row .desc .arrow
+    margin-bottom: 5px
+  .team .desc p
+    font-size: 10px
+    line-height: 13px
+    span
+      font-size: 14px
+
+// STYLING HISTORY SECTION
+.history
+  padding-bottom: 120px
+.history-block
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  padding: 0 30px
+  align-items: flex-end
+  .image
+    img
+      width: 420px
+      box-shadow: 0 10px 40px rgba(0,0,0,.5)
+  .desc
+    color: #fff
+    padding: 25px 25px 50px 25px
+    margin-bottom: 45px
+    // border-bottom: 3px solid $orange
+    // border-left: 3px solid $orange
+    position: relative
+    p
+      font-size: 18px
+      line-height: 25px
+      margin-bottom: 10px
+    h5
+      font-size: 21px
+      margin: 0
+// .bdr-top
+//   width: 35%
+//   height: 3px
+//   background: $orange
+//   position: absolute
+//   top: 0
+//   left: 0
+
+@media (max-width: 1200px)
+  .history-block
+    padding: 0
+    .desc
+      p
+        font-size: 16px
+        line-height: 24px
+      h5
+        font-size: 19px
+
+@media (max-width: 992px)
+  .history-block
+    flex-wrap: wrap
+    padding: 0 15px
+    .image
+      width: 100%
+      margin-bottom: 30px
+      img
+        width: 100%
+        order: 1
+    .desc
+      order: 2
+      padding-bottom: 25px
+      p
+        font-size: 18px
+
+@media (max-width: 576px)
+  .history
+    padding-bottom: 30px !important
+  .history-block
+    .desc
+      padding: 20px 0 20px 15px
+      p
+        font-size: 16px
+        line-height: 22px
+      h5
+        font-size: 17px
+
+@media (max-width: 992px)
+  .history
+    padding-bottom: 50px
+
+// STYLING FOOTER
+footer
+  padding: 65px 0 40px 0
+  background: #2A2F35
+  color: #fff
+  h3
+    text-align: center
+    font-family: 'Roboto', sans-serif
+    font-weight: normal
+    font-size: 21px
+    margin-bottom: 25px
+    text-transform: uppercase
+  .partners
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    align-items: center
+    margin-bottom: 20px
+    &.left
+      justify-content: flex-end
+      padding-right: 15px
+    &.right
+      padding-left: 15px
+    .circle-img
+      width: 60px
+      height: auto
+      border-radius: 50%
+      margin-right: 25px
+    a
+      color: #fff
+      font-size: 18px
+
+footer .contacts
+  width: 100%
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  margin-top: 30px
+  .block
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    padding: 0 10px
+    flex: 1
+    justify-content: center
+    align-items: center
+    &.left
+      order: 1
+    &.middle
+      border-right: 1px solid $orange
+      border-left: 1px solid $orange
+      order: 2
+      a
+        color: #fff
+        font-size: 34px
+        padding: 0 8px
+    &.right
+      flex-direction: column
+      order: 3
+      p
+        margin: 0
+        font-size: 16px
+        a
+          color: #fff
+        &:nth-child(2)
+          margin: 4px 0
+        i
+          height: 22px
+          width: 22px
+          display: inline-block
+          margin-right: 10px
+          position: relative
+          top: 3px
+          &.phone
+            background: url('../siteIcons/phone.svg') no-repeat
+          &.globe
+            background: url('../siteIcons/globe.svg') no-repeat
+          &.location
+            background: url('../siteIcons/location.svg') no-repeat
+  img
+    width: 130px
+    height: auto
+
+@media (max-width: 992px)
+  footer .contacts
+    flex-wrap: wrap
+  footer .contacts .block.left
+    order: 4
+    width: 100%
+    flex: 0 1 auto
+    margin-top: 40px
+  footer .contacts .block.middle
+    border-left: none
+
+@media (max-width: 768px)
+  footer .contacts .block.middle
+    justify-content: flex-end
+  footer .contacts .block.right
+    justify-content: flex-start
+
+@media (max-width: 576px)
+  footer .partners.left
+    padding-right: 0
+    justify-content: center
+  footer .partners.right
+    padding-left: 0
+    justify-content: center
+  footer .contacts .block.middle
+    width: 100%
+    flex: 0 1 auto
+    justify-content: space-around
+    order: 3
+    margin-top: 20px
+    padding: 0 40px
+    a
+      font-size: 50px
+  footer .contacts .block.right
+    width: 100%
+    flex: 0 1 auto
+    justify-content: center
+    order: 2
+  footer .contacts .block.left
+    margin-top: 25px
+
+
+// STYLING BACK-TO-UP BUTTON
+.back-to-top
+  width: 36px
+  height: 36px
+  padding: 32px
+  box-sizing: content-box
+  background: rgba(255,255,255,.2)
+  border-radius: 50%
+  position: fixed
+  bottom: 50px
+  right: 50px
+  display: none
+  cursor: pointer
+  opacity: .3
+  transition: .2s
+  &:hover
+    opacity: 1
+  .arrow-up
+    height: 100%
+    width: 100%
+    background: url('../siteIcons/arrow-up.svg') no-repeat
+    display: block
+
+@media (max-width: 576px)
+  .back-to-top
+    width: 25px
+    height: 25px
+    padding: 22px
+    bottom: 30px
+    right: 30px
+    opacity: 1
+
+// STYLING GALLARY SECTION
+.gallary
+  img
+    width: 100%
+    transition: .2s ease
+  a
+    position: relative
+    text-align: center
+    display: block
+    box-sizing: border-box
+    &:hover img
+      transform: scale(1.03)
+      filter: brightness(.5)
+    &:hover .material-icons
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%) scale(2)
+      transition: all 200ms 100ms cubic-bezier(0.175, 0.885, 0.32, 1.275)
+  .material-icons
+    transform: translate(-50%, -50%) scale(0)
+    color: #fff
+    position: absolute
+    top: 50%
+    left: 50%
+    transition: all 200ms cubic-bezier(0.6, -0.28, 0.735, 0.045)
+
+@media (min-width: 576px)
+  .gallary
+    li
+      &.marg
+        margin-top: 30px
+
+.lg-backdrop.in
+  opacity: .9
+.lg-toolbar
+  background-color: inherit
+
+@media (max-width: 576px)
+  .lg-outer .lg
+    width: 100% !important
+  .lg-backdrop.in
+    opacity: 1
+
+// STYLING HOW-WE-WORK SECTION
+.how-we-work
+  .content
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    width: 50%
+    .text-block
+      flex-grow: 1
+      display: -webkit-flex
+      display: -ms-flex
+      display: flex
+      flex-direction: column
+      color: #fff
+      line-height: 22px
+      font-size: 18px
+      height: 122px
+    &.left
+      margin-left: 45px
+      padding-left: 80px
+      h4
+        padding-left: 50px
+    &.right
+      margin-right: 45px
+      padding-right: 80px
+      text-align: right
+      h4
+        padding-right: 50px
+    ul
+      list-style-image: url('../siteIcons/list-disc.svg')
+      width: 100%
+      li
+        &:first-child
+          margin-top: 3px
+      &.right
+        text-align: right
+        direction: rtl
+        padding-right: 50px
+        padding-left: 50px
+      &.left
+        padding-left: 50px
+        padding-right: 50px
+    h4
+      font-size: 21px
+      font-weight: bold
+      margin-bottom: 3px
+  .icon-block
+    min-width: 90px
+    min-height: 90px
+
+@media (max-width: 1200px)
+  .how-we-work .content
+    &.right
+      padding-right: 0
+    &.left
+      padding-left: 0
+
+@media (max-width: 992px)
+  .how-we-work .content
+    &.right
+      margin-right: 0
+      width: calc(50% + 45px)
+    &.left
+      margin-left: 0
+      width: calc(50% + 45px)
+    .text-block
+      ul
+        &.right
+          padding-right: 20px
+          padding-left: 20px
+        &.left
+          padding-left: 20px
+          padding-right: 20px
+  .how-we-work .content.right h4
+    padding-right: 20px
+  .how-we-work .content.left h4
+    padding-left: 20px
+
+@media (max-width: 768px)
+  .how-we-work .content
+    &.right
+      width: 100%
+    &.left
+      width: 100%
+    .text-block
+      height: 170px
+      ul
+        &.right
+          padding-right: 50px
+          padding-left: 30px
+        &.left
+          padding-left: 50px
+          padding-right: 30px
+    .icon-block
+      min-width: 130px
+      min-height: 130px
+  .how-we-work .content.right h4
+    padding-right: 50px
+  .how-we-work .content.left h4
+    padding-left: 50px
+
+@media (max-width: 576px)
+  .how-we-work .content
+    .text-block
+      font-size: 16px
+      line-height: 20px
+      ul
+        &.right
+          padding-right: 20px
+          padding-left: 20px
+        &.left
+          padding-left: 20px
+          padding-right: 20px
+    .icon-block
+      min-width: 110px
+      min-height: 110px
+  .how-we-work .content.right h4
+    padding-right: 20px
+    font-size: 20px
+  .how-we-work .content.left h4
+    padding-left: 20px
+    font-size: 20px
+
+@media (max-width: 400px)
+  .how-we-work .content
+    .text-block
+      height: 165px
+    .icon-block
+      min-width: 100px
+      min-height: 100px
+
+// ============================ ANIMATE LINES ============================
+
+// ARTICLES SECTIONS
+.article
+  .cont-bdr-top
+    position: absolute
+    top: 0
+    left: 85%
+    width: 0
+    height: 3px
+    transition: all .07s linear
+    background: $orange
+  .cont-bdr-right
+    position: absolute
+    top: 0
+    right: 0
+    height: 0
+    width: 3px
+    background: $orange
+    transition: all .2s linear .07s
+  .cont-bdr-bottom
+    position: absolute
+    right: 0
+    bottom: 0
+    height: 3px
+    width: 0
+    background: $orange
+    transition: all .35s linear .27s
+
+  .p-bdr-bottom
+    position: absolute
+    bottom: 0
+    right: calc(100% - 30px)
+    width: 0
+    height: 3px
+    background: $orange
+    transition: all .03s linear
+  .p-bdr-left
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 3px
+    height: 0
+    background: $orange
+    transition: all .3s linear .03s
+  .p-bdr-top
+    position: absolute
+    top: 0
+    left: 0
+    width: 0
+    height: 3px
+    background: $orange
+    transition: all .03s linear .33s
+
+  .h-bdr-bottom
+    position: absolute
+    bottom: 0
+    right: calc(100% - 10px)
+    width: 0
+    height: 3px
+    background: $orange
+    transition: all .03s linear
+  .h-bdr-left
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 3px
+    height: 0
+    background: $orange
+    transition: all .3s linear .03s
+  .h-bdr-top
+    position: absolute
+    top: 0
+    left: 0
+    width: 0
+    height: 3px
+    background: $orange
+    transition: all .03s linear .33s
+
+.article.fire
+  .cont-bdr-top
+    width: 15%
+  .cont-bdr-right
+    height: 100%
+  .cont-bdr-bottom
+    width: 75%
+  .p-bdr-top
+    width: 30px
+  .p-bdr-bottom
+    width: 30px
+  .p-bdr-left
+    height: 100%
+  .h-bdr-top
+    width: 10px
+  .h-bdr-bottom
+    width: 10px
+  .h-bdr-left
+    height: 100%
+
+.removeTrans
+  transition: none !important
+
+// BAD-IDEAS SECTION
+.bad-ideas
+  .bdr-bottom
+    width: 0
+    height: 3px
+    background: $orange
+    position: absolute
+    bottom: 0
+    left: 10%
+    transition: all .3s linear
+  .bdr-right
+    height: 0
+    width: 3px
+    background: $orange
+    position: absolute
+    bottom: 0
+    right: 0
+    transition: all .3s linear .3s
+
+.bad-ideas.fire
+  .bdr-bottom
+    width: 90%
+  .bdr-right
+    height: 70%
+
+// HISTOTY SECTION
+.history
+  .bdr-top
+    width: 0
+    height: 3px
+    background: $orange
+    position: absolute
+    top: 0
+    right: 65%
+    transition: all .1s linear
+  .bdr-left
+    width: 3px
+    height: 0
+    background: $orange
+    position: absolute
+    top: 0
+    left: 0
+    transition: all .2s linear .1s
+  .bdr-bottom
+    width: 0
+    height: 3px
+    background: $orange
+    position: absolute
+    bottom: 0
+    left: 0
+    transition: all .25s linear .3s
+
+.history.fire
+  .bdr-top
+    width: 35%
+  .bdr-left
+    height: 100%
+  .bdr-bottom
+    width: 100%
+
+// HOW WEE WORK SECTION
+.how-we-work
+  .left-line
+    width: 0
+    height: 3px
+    background: $orange
+    transition: all .3s linear
+  .right-line
+    width: 100%
+    height: 0
+    position: relative
+    &::after
+      content: ''
+      display: block
+      background: $orange
+      height: 3px
+      width: 0
+      transition: all .3s linear
+      position: absolute
+      right: 0
+
+.how-we-work
+  .text-block.fire
+    .left-line
+      width: 100%
+    .right-line::after
+      width: 100%

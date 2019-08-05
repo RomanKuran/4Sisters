@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 79.82 79.82">
+    <defs>
+        <style>
+            .cls-1,.cls-2,.cls-3,.cls-4{fill:none;stroke:#ff8000;}.cls-1,.cls-2{stroke-miterlimit:10;}.cls-1{stroke-width:2.98px;}.cls-2,.cls-3{stroke-width:1.11px;}.cls-3,.cls-4{stroke-linecap:round;stroke-linejoin:round;}.cls-4{stroke-width:1.11px;}
+        </style>
+    </defs>
+    <title>Asset 13</title>
+    <g id="Layer_2" data-name="Layer 2">
+        <g id="Layer_1-2" data-name="Layer 1">
+            <rect class="cls-1" x="1.49" y="1.49" width="76.84" height="76.84"/>
+            <path class="cls-2"
+                  d="M53,43.64h-24a4.46,4.46,0,0,1-4.45-4.44L30,16.38c.72-2.26,2.37-4.45,4.81-4.45H46.66c2.44,0,5.29,2.62,5.55,4.45L57.4,39.2A4.46,4.46,0,0,1,53,43.64Z"/>
+            <polygon class="cls-3" points="36.74 48.35 23.45 67.74 30.09 43.64 36.74 48.35"/>
+            <polygon class="cls-3" points="44.93 48.35 58.22 67.74 51.58 43.64 44.93 48.35"/>
+            <line class="cls-2" x1="36.74" y1="48.35" x2="44.93" y2="48.35"/>
+            <path class="cls-4" d="M33.35,39.85s8.38,1.81,15.18,0"/>
+        </g>
+    </g>
+</svg>

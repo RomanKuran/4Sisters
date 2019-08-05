@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14.11 14.11">
+    <defs>
+        <style>.cls-1{fill:none;stroke:#ff8100;stroke-miterlimit:10;stroke-width:0.38px;}</style>
+    </defs>
+    <title>Asset 8</title>
+    <g id="Layer_2" data-name="Layer 2">
+        <g id="Layer_1-2" data-name="Layer 1">
+            <circle class="cls-1" cx="7.05" cy="7.05" r="6.86"/>
+            <ellipse class="cls-1" cx="7.08" cy="7.05" rx="3.68" ry="6.86"/>
+            <line class="cls-1" x1="7.05" y1="0.19" x2="7.05" y2="13.87"/>
+            <line class="cls-1" x1="0.75" y1="4.33" x2="13.22" y2="4.33"/>
+            <line class="cls-1" x1="0.19" y1="7.27" x2="13.92" y2="7.27"/>
+            <line class="cls-1" x1="1.07" y1="10.32" x2="13.22" y2="10.32"/>
+        </g>
+    </g>
+</svg>
